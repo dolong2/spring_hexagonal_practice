@@ -1,7 +1,7 @@
 package com.practice.hexagonal.application.posting.usecase
 
 import com.practice.hexagonal.application.posting.port.WritePostingPort
-import com.practice.hexagonal.infraStructure.global.useCase.UseCase
+import com.practice.hexagonal.infraStructure.global.annotation.useCase.UseCase
 import com.practice.hexagonal.presentation.posting.dto.request.PostingWriteReqDto
 
 @UseCase

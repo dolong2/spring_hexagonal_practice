@@ -1,4 +1,4 @@
-package com.practice.hexagonal.infraStructure.global.adapter
+package com.practice.hexagonal.infraStructure.global.annotation.adapter
 
 import org.springframework.web.bind.annotation.RestController
 
