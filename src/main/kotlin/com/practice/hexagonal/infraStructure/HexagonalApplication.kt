@@ -1,4 +1,4 @@
-package com.practice.hexagonal
+package com.practice.hexagonal.infraStructure
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
