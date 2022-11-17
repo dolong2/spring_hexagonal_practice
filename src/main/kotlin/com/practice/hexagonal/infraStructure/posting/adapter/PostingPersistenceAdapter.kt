@@ -21,9 +21,6 @@ class PostingPersistenceAdapter(
         postingRepository.findById(id)
             .orElseThrow { throw RuntimeException() }
 
-    override fun delete(id: String) =
-        postingRepository.deleteById(id)
-
     override fun delete(posting: Posting) =
         postingRepository.delete(posting)
 }

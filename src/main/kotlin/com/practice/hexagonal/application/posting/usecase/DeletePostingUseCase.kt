@@ -11,7 +11,7 @@ class DeletePostingUseCase(
 ){
     fun execute(id: String, writer: String){
         val posting = getOnePostingPort.getOne(id)
-        if(posting.writer == writer)
+        if(posting.writer != writer)
             throw RuntimeException()
         deletePostingPort.delete(posting)
     }
