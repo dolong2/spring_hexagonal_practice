@@ -4,4 +4,5 @@ interface PostingPort:
     WritePostingPort,
     GetAllPostingPort,
     GetOnePostingPort,
-    DeletePostingPort
+    DeletePostingPort,
+    UpdatePostingPort

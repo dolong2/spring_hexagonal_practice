@@ -23,4 +23,8 @@ class PostingPersistenceAdapter(
 
     override fun delete(posting: Posting) =
         postingRepository.delete(posting)
+
+    override fun updatePosting(newPosting: Posting) {
+        postingRepository.save(newPosting)
+    }
 }
