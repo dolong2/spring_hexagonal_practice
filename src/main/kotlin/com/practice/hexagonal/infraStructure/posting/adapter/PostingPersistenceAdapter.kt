@@ -2,6 +2,7 @@ package com.practice.hexagonal.infraStructure.posting.adapter
 
 import com.practice.hexagonal.application.posting.port.PostingPort
 import com.practice.hexagonal.domain.posting.Posting
+import com.practice.hexagonal.domain.posting.exception.PostingNotFindException
 import com.practice.hexagonal.infraStructure.posting.repository.PostingRepository
 import org.springframework.stereotype.Component
 import java.lang.RuntimeException
@@ -19,7 +20,7 @@ class PostingPersistenceAdapter(
 
     override fun getOne(id: String): Posting =
         postingRepository.findById(id)
-            .orElseThrow { throw RuntimeException() }
+            .orElseThrow { throw PostingNotFindException() }
 
     override fun delete(posting: Posting) =
         postingRepository.delete(posting)

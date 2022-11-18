@@ -2,6 +2,7 @@ package com.practice.hexagonal.application.posting.usecase
 
 import com.practice.hexagonal.application.posting.port.DeletePostingPort
 import com.practice.hexagonal.application.posting.port.GetOnePostingPort
+import com.practice.hexagonal.domain.posting.exception.PostingUserNotSameException
 import com.practice.hexagonal.infraStructure.global.annotation.useCase.UseCase
 
 @UseCase
@@ -12,7 +13,7 @@ class DeletePostingUseCase(
     fun execute(id: String, writer: String){
         val posting = getOnePostingPort.getOne(id)
         if(posting.writer != writer)
-            throw RuntimeException()
+            throw PostingUserNotSameException()
         deletePostingPort.delete(posting)
     }
 }
