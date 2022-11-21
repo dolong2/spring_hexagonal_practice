@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse
 class GlobalExceptionHandler {
     private val log = LoggerFactory.getLogger(this.javaClass.simpleName)
     @ExceptionHandler(BasicException::class)
-    fun basicExceptionHandling(request: HttpServletRequest, response: HttpServletResponse, ex:BasicException): ResponseEntity<ErrorResponse> {
+    fun basicExceptionHandler(request: HttpServletRequest, response: HttpServletResponse, ex:BasicException): ResponseEntity<ErrorResponse> {
         log.error(request.requestURI)
         log.error(ex.message)
         ex.printStackTrace()
@@ -22,7 +22,7 @@ class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(HttpMessageNotReadableException::class)
-    fun HttpMessageNotReadExceptionHandler(request: HttpServletRequest, response: HttpServletResponse, ex:HttpMessageNotReadableException): ResponseEntity<ErrorResponse>{
+    fun HttpMessageNotReadableExceptionHandler(request: HttpServletRequest, response: HttpServletResponse, ex:HttpMessageNotReadableException): ResponseEntity<ErrorResponse>{
         log.error(request.requestURI)
         log.error(ex.message)
         ex.printStackTrace()
