@@ -1,9 +1,9 @@
-package com.practice.hexagonal.infraStructure.posting.adapter
+package com.practice.hexagonal.infraStructure.persistence.posting.adapter
 
 import com.practice.hexagonal.application.posting.port.PostingPort
 import com.practice.hexagonal.domain.posting.Posting
 import com.practice.hexagonal.domain.posting.exception.PostingNotFindException
-import com.practice.hexagonal.infraStructure.posting.repository.PostingRepository
+import com.practice.hexagonal.infraStructure.persistence.posting.repository.PostingRepository
 import org.springframework.stereotype.Component
 import java.lang.RuntimeException
 
